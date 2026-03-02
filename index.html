@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA 2025-29 | The Ultimate CA Hub</title>
+    <style>
+        :root { --glass: rgba(255, 255, 255, 0.95); --primary: #4f46e5; --dark: #0f172a; --accent: #f43f5e; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); background-attachment: fixed; color: #334155; margin: 0; padding: 20px; }
+        .container { max-width: 1000px; margin: auto; }
+        
+        header { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); color: white; padding: 60px 20px; text-align: center; border-radius: 30px; margin-bottom: 40px; border: 1px solid rgba(255,255,255,0.2); }
+        .badge { background: var(--accent); padding: 5px 15px; border-radius: 50px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
+
+        .cheat-sheet { background: #fffbeb; border: 2px solid #fcd34d; padding: 20px; border-radius: 20px; margin-bottom: 30px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border-bottom: 1px solid #fde68a; padding: 10px; text-align: left; }
+
+        .module-wrap { background: var(--glass); padding: 40px; border-radius: 24px; margin-bottom: 40px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5); }
+        h2 { color: var(--dark); font-size: 2rem; border-left: 8px solid var(--primary); padding-left: 15px; }
+        
+        .q-card { background: white; padding: 25px; border-radius: 18px; margin-bottom: 30px; border: 1px solid #e2e8f0; position: relative; }
+        .question { font-weight: 800; color: var(--primary); font-size: 1.25rem; display: block; margin-bottom: 10px; }
+        
+        img { width: 100%; max-width: 700px; height: auto; border-radius: 15px; margin: 20px 0; border: 1px solid #ddd; }
+        
+        .warning { background: #fff1f2; border: 1px solid #fecdd3; padding: 15px; border-radius: 12px; color: #be123c; font-weight: 600; margin-top: 15px; }
+        
+        .quiz-container { background: #1e293b; color: white; padding: 40px; border-radius: 24px; }
+        summary { cursor: pointer; color: #6ee7b7; font-weight: bold; padding: 10px 0; }
+        
+        footer { text-align: center; padding: 40px; color: rgba(255,255,255,0.6); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="badge">Advanced Prep Hub</span>
+        <h1>BCA Computer Architecture Masterclass</h1>
+        <p>Batch 2025 - 2029 | Strategic Exam Guide</p>
+    </header>
+
+    <div class="cheat-sheet">
+        <h3>⚡ 60-Second Cheat Sheet</h3>
+        <table>
+            <tr><th>Topic</th><th>Golden Rule</th></tr>
+            <tr><td><b>2's Comp</b></td><td>Invert bits + 1. Discard final carry.</td></tr>
+            <tr><td><b>K-Map</b></td><td>Always group 8, then 4, then 2. Gray code order!</td></tr>
+            <tr><td><b>JK Flip-Flop</b></td><td>J=1, K=1 means <i>Toggle</i>.</td></tr>
+            <tr><td><b>MUX</b></td><td>The "Data Selector" (2<sup>n</sup> inputs).</td></tr>
+        </table>
+    </div>
+
+    <section class="module-wrap">
+        <h2>Module 1: Number Systems & Arithmetic</h2>
+        <div class="q-card">
+            <span class="question">Q: Why do we use Hexadecimal in Computers?</span>
+            <p>Binary (01010111) is hard for humans. Hexadecimal is a shorthand. Every 1 Hex digit perfectly replaces 4 Binary bits. It saves space and prevents errors.</p>
+            <div class="warning">⚠️ Common Mistake: Forgetting that A=10, B=11, C=12, D=13, E=14, F=15.</div>
+        </div>
+
+        <div class="q-card">
+            <span class="question">Q: IEEE 754 Floating Point (32-bit)</span>
+            <p>The standard way to store decimals. Remember the Bias of 127!</p>
+            
+        </div>
+    </section>
+
+    <section class="module-wrap">
+        <h2>Module 2: Logic Gates & Design</h2>
+        <div class="q-card">
+            <span class="question">Q: Universal Gates (NAND/NOR)</span>
+            <p>You can create AND, OR, and NOT gates using only NAND gates. This is why manufacturers love them—it makes production cheaper.</p>
+            
+        </div>
+
+        <div class="q-card">
+            <span class="question">Q: The Full Adder Circuit</span>
+            <p>Essential for math. It handles the "Carry" from the previous addition.</p>
+            [attachment_0](attachment)
+        </div>
+
+        <div class="q-card">
+            <span class="question">Q: K-Map Optimization</span>
+            <p>The goal is to simplify Boolean Algebra to the smallest possible circuit.</p>
+            
+        </div>
+
+        <div class="q-card">
+            <span class="question">Q: JK Flip-Flop & Race Around Condition</span>
+            <p>A sequential circuit that remembers 1 bit. When J and K are both 1, it toggles (flips). To stop "Race Around" (unstable flipping), we use Master-Slave Flip-Flops.</p>
+            
+        </div>
+    </section>
+
+    <section class="quiz-container">
+        <h2>🎯 Rapid Exam Quiz</h2>
+        <details><summary>1. How many entries are in a 4-variable K-Map?</summary><p>Answer: 16 (2<sup>4</sup>).</p></details>
+        <details><summary>2. Which code is used in K-Map labeling?</summary><p>Answer: Gray Code (only 1 bit changes).</p></details>
+        <details><summary>3. What happens in an SR Flip-Flop if S=1 and R=1?</summary><p>Answer: Invalid/Forbidden state!</p></details>
+    </section>
+
+    <footer>
+        <p>Built for the Legends of BCA 2025-29 ♥️</p>
+        <p>Made with Science & Logic.</p>
+    </footer>
+</div>
+
+</body>
+</html>
